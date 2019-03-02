@@ -3,10 +3,6 @@ import util
 
 from boggle import Boggle
 
-ROOT = './'
-INPUT_FOLDER = ROOT + 'input_files/'
-DICTIONARY_PATH = ROOT + 'dictionary.txt'
-
 def print_error_instructions():
     """Prints out instructions when a proper file is not selected."""
 

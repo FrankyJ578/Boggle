@@ -20,7 +20,8 @@ boggle.py: file containing the implementation of Boggle
 
 dictionary.txt: file containing all the words in the dictionary
 
-main.py: main program used to get user input and solve a Boggle game
+main.py: main program used to get user input for which file from input_files to use and build/solve a Boggle game
+- must create a file in input_files in order to select that given board (must be valid input format - error checking present)
 
 test.py: testing program used to verify correctness of the implementation (compares optimized solution to naive solution for correctness and efficiency)
 

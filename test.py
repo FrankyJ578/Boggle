@@ -6,8 +6,8 @@ from boggle import Boggle
 def test(dictionary, filename):
     # Actual implementation
     input_file_path = util.INPUT_FOLDER + filename
-    start = time.time()
     boggle = Boggle(util.DICTIONARY_PATH, input_file_path)
+    start = time.time()
     results = boggle.solve()
     end = time.time()
     print("Actual Time: ", end - start)
@@ -19,6 +19,7 @@ def test(dictionary, filename):
     end = time.time()
     print("Naive Time: ", end - start)
 
+    # Check Equality and Print Results
     assert(results == naive_results)
     print('Numer of Possible Words: ', len(results))
     print('Results: ', results)
@@ -76,4 +77,8 @@ if __name__=='__main__':
     dictionary = construct_dictionary()
     test(dictionary, 'basic_test_1.txt')
     test(dictionary, 'basic_test_2.txt')
+    test(dictionary, 'basic_test_3.txt')
+    test(dictionary, 'basic_test_4.txt')
+
+    # Takes about 400 seconds for naive solution to finish
     test(dictionary, 'medium_test_1.txt')

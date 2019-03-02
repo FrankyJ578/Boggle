@@ -9,7 +9,7 @@ class Boggle:
     def build_board(self, input_path):
         """Builds the Boggle board and the tracking board, which will
         be necessary for keeping track of which letters we've used so far
-        in a given path
+        in a given path.
 
         Arguments: input_path - path to the file containing metadata for board
         Returns: board - board with letters
@@ -22,9 +22,9 @@ class Boggle:
             tracking_board = [[0 for _ in range(n)] for _ in range(n)]
             board = [[] for _ in range(n)]
 
-            for i in range(n):
+            for row in range(n):
                 for letter in file.readline().strip().split(' '):
-                    board[i].append(letter)
+                    board[row].append(letter)
 
             return board, tracking_board
 

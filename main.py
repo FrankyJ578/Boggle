@@ -75,7 +75,7 @@ def verify_boggle_input_format(input_file_path):
 
     return False
 
-def printResults(possible_words):
+def print_results(possible_words):
     """Prints the number of possible words and a list of all the words"""
 
     print("Number of Possible Words: ", len(possible_words))
@@ -86,4 +86,4 @@ if __name__=='__main__':
     input_file_path = select_input()
     boggle = Boggle(util.DICTIONARY_PATH, input_file_path)
     possible_words = boggle.solve()
-    printResults(possible_words)
+    print_results(possible_words)

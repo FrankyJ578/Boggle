@@ -5,7 +5,7 @@ Given an NxN grid, find all possible words formed in Boggle.
 The rules of Boggle:
 - The letters must be adjoining in a 'chain'. (Letter cubes in the chain may be adjacent horizontally, vertically, or diagonally.)
 - Words must contain at least three letters.
-No letter cube may be used more than once within a single word.
+- No letter cube may be used more than once within a single word.
 
 Implementation:
 To solve the problem, we use recursive backtracking. In addition, this implementation uses a trie data structure to store and search the dictionary for prefixes. This is a lot faster than the unoptimized naive solution (which is also provided in test.py) which just stores words in a hashset. By using a trie, we can eliminate a lot of search paths when we find a prefix that doesn't exist in the trie dictionary.
